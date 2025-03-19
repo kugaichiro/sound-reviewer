@@ -1,0 +1,6 @@
+起動の仕方
+npm run dev
+
+php artisan serve
+
+つぎに"http://127.0.0.1:8000"にアクセス
