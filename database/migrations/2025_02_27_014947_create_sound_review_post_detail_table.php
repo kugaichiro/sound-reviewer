@@ -16,7 +16,7 @@ return new class extends Migration
             $table->foreignId('sound_review_post_id')->references('id')->on('sound_review_posts');
             $table->text('item_name');
             $table->text('item_description');
-            $table->int('number_of_Like');
+            $table->integer('number_of_Like');
             $table->timestamps();
         });
     }

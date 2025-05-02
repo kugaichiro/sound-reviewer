@@ -2,6 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Models\SoundReviewPost;
+use App\Models\SoundReviewPostDetail;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -13,11 +15,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
-
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
+        $soundreviewpost = SoundReviewPost::factory()->create();
+        SoundReviewPostDetail::factory()->create([
+            'sound_review_post_id' => $soundreviewpost->id,
         ]);
     }
 }
